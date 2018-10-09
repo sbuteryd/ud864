@@ -4,11 +4,18 @@ function initMap() {
         zoom:13
     });
 
-    let tribece = {lat:40.708294,lng: -73.999445}
+    let tribece = {lat:40.708294,lng: -73.999445};
     let marker = new google.maps.Marker({
         position:tribece,
         map:map,
         title:'fist marker'
     });
 
+    let infowindow =  new google.maps.InfoWindow({
+        content:'Do you ever feel like  this is Russell'
+    });
+
+    marker.addListener('click',function () {
+        infowindow.open(map,marker)
+    })
 }
