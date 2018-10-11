@@ -6,5 +6,11 @@ function initMap() {
         //经纬度
         center:{lat:40.712775,lng:-74.005973},
         zoom:13
+    });
+    lanLng ={lat:40.733266, lng:-73.967849};
+    let marker = new google.maps.Marker({
+        map:map,
+        position:lanLng,
+        title:'review chapter1and2'
     })
 }
